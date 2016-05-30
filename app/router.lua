@@ -115,9 +115,9 @@ return function(app)
             })
         end
 
-        local res, err = db:query("delete from topic where no=? ",
+        local result, err = db:query("delete from yc_otp where no=? ",
                 {no})
-        if res and not err then
+        if result and not err then
             res:json({
                 success = true
             })
