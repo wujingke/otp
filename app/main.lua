@@ -2,11 +2,7 @@ local lor = require("lor.index")
 local router = require("app.router")
 local app = lor()
 
--- session和cookie支持，如果不需要可注释以下四行
-local middleware_cookie = require("lor.lib.middleware.cookie")
-local middleware_session = require("lor.lib.middleware.session")
-app:use(middleware_cookie())
-app:use(middleware_session())
+
 
 app:conf("view enable", true)
 app:conf("view engine", "tmpl")
